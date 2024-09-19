@@ -31,7 +31,7 @@ const projects = [
   {
     img: project3,
     title: "Project #3",
-    description: "UI for frontend development using HTML, CSS, JS - Name: Imouz.",
+    description: "UI Imouz for frontend development using HTML, CSS, JS",
     links: {
       site: "https://tuananhkim555.github.io/Imouz/",
       github: "https://github.com/tuananhkim555/Imouz",
@@ -90,11 +90,11 @@ const Portfolio = () => {
               {project.title}
             </h3>
             <p className="text-gray-300 mb-4">{project.description}</p>
-            <div className="flex space-x-4 ">
+            <div className="flex space-x-4 items-center">
                 <a href={project.links.site} className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300">View Site</a>
                 <a href={project.links.github}
-                className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
-                ><AiOutlineGithub/></a>
+                className="p-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
+                ><AiOutlineGithub size={24}/></a>
             </div>
           </div>
         </div>
