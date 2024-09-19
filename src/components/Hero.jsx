@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import profilepic from '../assets/anhdaidien.png';
+import CVPortfolio from '../assets/CVPortfolio.pdf';
 import { TypeAnimation } from 'react-type-animation';
 import ShinyEffect from './ShinyEffect';
 import {
@@ -20,6 +21,15 @@ import {
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = CVPortfolio;
+    link.download = 'CVPortfolio.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className='mt-24 max-w-[1200px] mx-auto relative'>
       <div className='grid md:grid-cols-2 place-items-center gap-8'>
@@ -71,6 +81,7 @@ const Hero = () => {
                     <motion.button 
                         whileHover={{scale: 1.05, boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.3)'}}
                         className='z-10 cursor-pointer text-gray-200 font-bold md:w-auto p-4 border border-purple-400 rounded-xl bg-gradient-to-r  to-purple-600 hover:from-purple-500 hover:to-purple-600'
+                        onClick={handleDownloadCV}
                     >
                         Download CV
                     </motion.button>
@@ -106,14 +117,16 @@ const Hero = () => {
             whileInView={{opacity: 1}}
             viewport={{once: true}}
             transition={{duration: 1, delay: 2}}
-            className='flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24'
+            className='flex flex-col md:flex-row items-center justify-center w-full py-12 md:py-24 px-4 md:px-0'
          >
-              <p className='text-gray-200 mr-6'>My Tech Stack</p>   
-                <DiHtml5 className='text-orange-600 mx-2'/>
-                <DiCss3 className='text-blue-600 mx-2'/>
-                <DiJavascript1 className='text-yellow-500 mx-2'/>
-                <DiReact className='text-blue-500 mx-2'/>
-                <DiNodejsSmall className='text-green-500 mx-2'/>
+              <p className='text-gray-200 text-xl md:text-2xl mb-6 md:mb-0 md:mr-6'>My Tech Stack</p>   
+              <div className='flex flex-wrap justify-center gap-4 text-4xl md:text-5xl'>
+                <DiHtml5 className='text-orange-600'/>
+                <DiCss3 className='text-blue-600'/>
+                <DiJavascript1 className='text-yellow-500'/>
+                <DiReact className='text-blue-500'/>
+                <DiNodejsSmall className='text-green-500'/>
+              </div>
          </motion.div>
          <div className='absolute inset-0 hidden md:block'>
           <ShinyEffect left={0} top={0} size={1400} />

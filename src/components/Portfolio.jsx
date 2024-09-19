@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import project1 from "../assets/Duanphim.png";
-import project2 from "../assets/WebShop.png";
+import project2 from "../assets/Shoptuananh.png";
 import project3 from "../assets/Imoublog.png";
 import project4 from "../assets/AI Portfolio.png";
 import project5 from "../assets/Samarblog.png";
@@ -51,8 +51,8 @@ const projects = [
     title: "Project #5",
     description: "UI for frontend development using HTML, CSS, JS.",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://tuananhkim555.github.io/SamarProject",
+      github: "https://github.com/tuananhkim555/SamarProject",
     },
   },
   {

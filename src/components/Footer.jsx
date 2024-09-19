@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { FaGithubSquare, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
-import Reveal from './Reveal'
+import { FaGithub, FaFacebook,  FaMapMarkerAlt, FaPhone, FaEnvelope, FaTiktok } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -10,9 +9,9 @@ const Footer = () => {
         <div className='space-y-4 text-center md:text-left'>
           <h3 className='text-3xl font-bold'>Tuan Anh Dev</h3>
           <div className='flex flex-row gap-6 text-4xl justify-center md:justify-start'>
-            <a href="#" className='hover:text-purple-400 transition-colors'><FaGithubSquare/></a>
-            <a href="#" className='hover:text-purple-400 transition-colors'><FaFacebook/></a>
-            <a href="#" className='hover:text-purple-400 transition-colors'><FaInstagram/></a>
+            <a href="https://github.com/tuananhkim555?tab=repositories" className='hover:text-purple-400 transition-colors'><FaGithub/></a>
+            <a href="https://www.facebook.com/profile.php?id=100058628592945" className='hover:text-purple-400 transition-colors'><FaFacebook/></a>
+            <a href="https://www.tiktok.com/@tuananh.react?lang=vi-VN" className='hover:text-purple-400 transition-colors'><FaTiktok/></a>
           </div>
         </div>
         <div className='space-y-4 text-center md:text-right'>
