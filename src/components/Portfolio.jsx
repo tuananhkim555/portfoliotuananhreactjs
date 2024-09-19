@@ -24,8 +24,8 @@ const projects = [
     title: "Project #2",
     description: "This is an e-commerce shop interface built with a fullstack approach using Next.js.",
     links: {
-      site: "https://whimsical-paprenjak-22a4f0.netlify.app",
-      github: "https://github.com/tuananhkim555/shop-react-nextjs",
+      site: "https://shoptuananh.vercel.app",
+      github: "https://github.com/tuananhkim555/shoshop",
     },
   },
   {
