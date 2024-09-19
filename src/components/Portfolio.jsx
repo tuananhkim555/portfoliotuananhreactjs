@@ -15,8 +15,8 @@ const projects = [
     title: "Project #1",
     description: "This is a UI project for a movie streaming website, built using React.js.",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://webxemphimtuananh.vercel.app",
+      github: "https://github.com/tuananhkim555/webxemphimtuananh",
     },
   },
   {
@@ -24,17 +24,17 @@ const projects = [
     title: "Project #2",
     description: "This is an e-commerce shop interface built with a fullstack approach using Next.js.",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://whimsical-paprenjak-22a4f0.netlify.app",
+      github: "https://github.com/tuananhkim555/shop-react-nextjs",
     },
   },
   {
     img: project3,
     title: "Project #3",
-    description: "UI for frontend development using HTML, CSS, JS.",
+    description: "UI for frontend development using HTML, CSS, JS - Name: Imouz.",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://tuananhkim555.github.io/Imouz/",
+      github: "https://github.com/tuananhkim555/Imouz",
     },
   },
   {

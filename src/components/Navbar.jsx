@@ -80,18 +80,7 @@ const Navbar = () => {
     setShowAIMenu(!showAIMenu);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (aiMenuRef.current && !aiMenuRef.current.contains(event.target)) {
-        setShowAIMenu(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  // Removed the useEffect hook that was handling the click outside event
 
   const handleNavigation = useCallback((to) => {
     navigate('/');
@@ -110,12 +99,14 @@ const Navbar = () => {
   }, [navigate, closeNav]);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md z-50">
+    <>
+    <div className="fixed top-0 left-0 w-full z-50">
+      <div className="absolute inset-0 bg-opacity-70 backdrop-blur-md"></div>
       <BackgroundBeamsWithCollision className="absolute inset-0 z-0" />
       <div className="max-w-[1300px] mx-auto flex justify-between text-gray-200 text-xl items-center px-4 sm:px-12 h-20 relative z-10">
         <a href="#" className="cursor-pointer" onClick={() => handleNavigation('hero')}>TUAN ANH DEV</a>
 
-        <ul className="hidden md:flex gap-12 cursor-pointer items-center">
+        <ul className="hidden lg:flex gap-12 cursor-pointer items-center">
           <li className="cursor-pointer" onClick={() => handleNavigation('skills')}>
             About
           </li>
@@ -127,10 +118,9 @@ const Navbar = () => {
               AI <AiOutlineDown className="ml-1" />
             </div>
             {showAIMenu && (
-              <ul className="absolute left-0 mt-2 space-y-2 bg-purple-900/30 backdrop-blur-sm border border-purple-900 text-white p-3 rounded-md w-48">
-                <li className="cursor-pointer" onClick={() => handleAINavigation('/ai-image')}><span className="text-sm block text-gray-300 hover:text-purple-300 text-left">AI Image</span></li>
-                <li className="cursor-pointer" onClick={() => handleAINavigation('/ai-chatbox')}><span className="text-sm block text-gray-300 hover:text-purple-300 text-left">AI Chatbot</span></li>
-                {/* Add more AI-related links as needed */}
+              <ul className="absolute left-0 mt-2 space-y-2  backdrop-blur-md border border-purple-900 text-white p-3 rounded-md w-40">
+                <li className="cursor-pointer text-[16px] block text-gray-300 hover:text-purple-300 text-left" onClick={() => handleAINavigation('/ai-image')}>AI Image</li>
+                <li className="cursor-pointer text-[16px] block text-gray-300 hover:text-purple-300 text-left" onClick={() => handleAINavigation('/ai-chatbox')}>AI Chatbot</li>
               </ul>
             )}
           </li>
@@ -150,14 +140,14 @@ const Navbar = () => {
             )}
           </li>
         </ul>
-        <div onClick={toggleNav} className="md:hidden text-gray-200 cursor-pointer">
+        <div onClick={toggleNav} className="lg:hidden text-gray-200 cursor-pointer">
           {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
         <motion.div
           initial={false}
           animate={nav ? "open" : "closed"}
           variants={menuVariants}
-          className="fixed top-0 left-0 min-h-screen w-full bg-purple-900/90 backdrop-blur-lg z-40"
+          className="fixed top-0 left-0 min-h-screen w-full bg-black/90 backdrop-blur-md z-40 lg:hidden"
         >
           <div className="flex justify-end p-4">
             <AiOutlineClose size={30} className="text-gray-200 cursor-pointer" onClick={closeNav} />
@@ -178,13 +168,13 @@ const Navbar = () => {
               </div>
               {showAIMenu && (
                 <ul className="mt-2 space-y-2 text-left">
-                  <li className="flex items-center cursor-pointer" onClick={() => handleAINavigation('/ai-image')}>
+                  <li className="flex items-center justify-center cursor-pointer" onClick={(e) => { e.stopPropagation(); handleAINavigation('/ai-image'); }}>
                     <AiOutlineCamera className="mr-2" />
-                    <span className="text-sm">AI Image</span>
+                    <span className="text-[16px] text-gray-400">AI Image</span>
                   </li>
-                  <li className="flex items-center cursor-pointer" onClick={() => handleAINavigation('/ai-chatbox')}>
+                  <li className="flex items-center justify-center cursor-pointer" onClick={(e) => { e.stopPropagation(); handleAINavigation('/ai-chatbox'); }}>
                     <AiOutlineMessage className="mr-2" />
-                    <span className="text-sm">AI Chatbot</span>
+                    <span className="text-[16px] text-gray-400">AI Chatbot</span>
                   </li>
                   {/* Add more AI-related links as needed */}
                 </ul>
@@ -214,8 +204,8 @@ const Navbar = () => {
       </div>
       {showModal && (
         <div className="fixed inset-0 flex justify-center z-50">
-          <div className="absolute top-[350px] bg-gray-200 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4 text-purple-600">Login</h2>
+          <div className="absolute top-[300px] bg-gray-200 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4 text-purple-700">Login</h2>
             <GoogleLogin
               onSuccess={handleLoginSuccess}
               onError={() => {
@@ -224,14 +214,15 @@ const Navbar = () => {
             />
             <button
               onClick={toggleModal}
-              className="mt-4 bg-purple-600 text-white px-4 py-2 rounded cursor-pointer"
+              className="mt-4 bg-purple-700 text-white px-4 py-2 rounded cursor-pointer"
             >
               Close
             </button>
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 };
 
