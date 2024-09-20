@@ -80,7 +80,7 @@ const Hero = () => {
                         >
                     <motion.button 
                         whileHover={{scale: 1.05, boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.3)'}}
-                        className='z-10 cursor-pointer text-gray-200 font-bold md:w-auto p-4 border border-purple-400 rounded-xl bg-gradient-to-r  to-purple-600 hover:from-purple-500 hover:to-purple-600'
+                        className='z-10 cursor-pointer text-gray-200 font-bold w-auto p-3 md:p-4 px-3 md:px-4 border border-purple-400 rounded-xl bg-gradient-to-r to-purple-600 hover:from-purple-400 hover:to-purple-600 text-sm md:text-base'
                         onClick={handleDownloadCV}
                     >
                         Download CV
