@@ -93,7 +93,7 @@ const AiChatbox = () => {
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    className="flex-1 border border-gray-300 rounded-full px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-purple-900"
+                    className="flex w-full border border-gray-300 rounded-full px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-purple-900"
                     placeholder="Type a message..."
                   />
                   <button
