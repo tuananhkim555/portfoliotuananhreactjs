@@ -13,7 +13,7 @@ import {
   AiOutlineMessage,
 } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-scroll";
+import { Link } from"react-scroll";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
@@ -104,7 +104,7 @@ const Navbar = () => {
       <div className="absolute inset-0 bg-opacity-70 backdrop-blur-md"></div>
       <BackgroundBeamsWithCollision className="absolute inset-0 z-0" />
       <div className="max-w-[1300px] mx-auto flex justify-between text-gray-200 text-xl items-center px-4 sm:px-12 h-20 relative z-10">
-        <a href="#" className="cursor-pointer" onClick={() => handleNavigation('hero')}>TUAN ANH DEV</a>
+        <a href="#" className="cursor-pointer" onClick={() => handleNavigation('hero')}>TUAN ANH <span className="text-orange-400">DEV</span></a>
 
         <ul className="hidden lg:flex gap-12 cursor-pointer items-center">
           <li className="cursor-pointer" onClick={() => handleNavigation('skills')}>
@@ -203,9 +203,9 @@ const Navbar = () => {
         </motion.div>
       </div>
       {showModal && (
-        <div className="fixed inset-0 flex justify-center z-50">
-          <div className="absolute top-[300px] bg-gray-200 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4 text-purple-700">Login</h2>
+        <div className="fixed inset-0 flex justify-center items-start z-50">
+          <div className="absolute top-[250px] lg:top-[300px] bg-gray-200 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4 text-orange-600">Login</h2>
             <GoogleLogin
               onSuccess={handleLoginSuccess}
               onError={() => {

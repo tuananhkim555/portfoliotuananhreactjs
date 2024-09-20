@@ -15,15 +15,15 @@ const Footer = () => {
           </div>
         </div>
         <div className='space-y-4 text-center md:text-right'>
-          <p className='flex items-center justify-center md:justify-end text-[16px]'>
+          <p className='flex items-center justify-center md:justify-end text-[15px]'>
             <FaMapMarkerAlt className='mr-2 text-purple-400' />
             Le Thuy - Quang Binh - Viet Nam
           </p>
-          <p className='flex items-center justify-center md:justify-end text-[16px]'>
+          <p className='flex items-center justify-center md:justify-end text-[15px]'>
             <FaPhone className='mr-2 text-purple-400' />
             +(84).766.353.315
           </p>
-          <p className='flex items-center justify-center md:justify-end text-[16px]'>
+          <p className='flex items-center justify-center md:justify-end text-[15px]'>
             <FaEnvelope className='mr-2 text-purple-400' />
             tuananhkim555@gmail.com
           </p>
