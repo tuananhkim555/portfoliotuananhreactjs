@@ -3,7 +3,7 @@ import React from "react";
 import project1 from "../assets/Duanphim.png";
 import project2 from "../assets/Shoptuananh.png";
 import project3 from "../assets/Imoublog.png";
-import project4 from "../assets/AI Portfolio.png";
+import project4 from "../assets/FigmaMovie.png";
 import project5 from "../assets/Samarblog.png";
 import project6 from "../assets/aiportfolio2.png";
 import { AiFillGithub, AiOutlineGithub } from "react-icons/ai";
@@ -39,10 +39,10 @@ const projects = [
   },
   {
     img: project4,
-    title: "Project #4",
-    description: "UI for frontend development using HTML, CSS, JS.",
+    title: "Figma #1",
+    description: "UI for Figma Design Project",
     links: {
-      site: "#",
+      site: "https://www.figma.com/design/rm0mzwxFF3b2zxrlKPVJL4/Project-Movie-Ticket?t=RJIkeThjsaKa4OL3-0",
       github: "#",
     },
   },
