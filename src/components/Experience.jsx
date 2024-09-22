@@ -7,8 +7,8 @@ import { BackgroundGradient } from './ui/background-gradient';
 const experiences = [
     {
         company: "First Company",
-        period: "2023-2024",
-        description: "Description of your experience in this company",
+        period: "2022-2023",
+        description: "Bang Onsen Spa Resort",
     },
 ]
 
