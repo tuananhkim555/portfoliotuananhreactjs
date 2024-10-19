@@ -7,8 +7,6 @@ import ShinyEffect from './ShinyEffect';
 import {
     AiOutlineFacebook,
     AiOutlineGithub,
-    AiOutlineInstagram,
-    AiOutlineLinkedin,
     AiOutlineTikTok,
 } from 'react-icons/ai';
 import {
@@ -17,8 +15,12 @@ import {
     DiJavascript1,
     DiReact,
     DiNodejsSmall,
+    DiMongodb,
+    DiMysql,
+    DiFirebase,
 } from 'react-icons/di';
 import { motion } from 'framer-motion';
+import { FaDocker} from 'react-icons/fa';
 
 const Hero = () => {
   const handleDownloadCV = () => {
@@ -45,12 +47,12 @@ const Hero = () => {
                     1000,
                     'Web Designer',
                     1000,
-                    'Consultant',
+                    'App Mobile',
                     1000,
                 ]}
                 speed={50}
                 repeat={Infinity}
-                className='text-xl font-bold text-gray-400 md:text-5xl italic- mb-4'
+                className='text-xl font-bold md:text-5xl italic- mb-4 bg-gradient-to-r from-orange-300 to-orange-500 text-transparent bg-clip-text'
             />
                 <motion.p
                     initial={{opacity: 0}}
@@ -85,7 +87,7 @@ const Hero = () => {
                     >
                         Download CV
                     </motion.button>
-                    <div className='flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20'>
+                    <div className='flex gap-6 flex-row text-4xl md:text-6xl text-purple-500 z-20'>
                         <motion.a whileHover={{scale: 1.2}} href='https://github.com/tuananhkim555?tab=repositories'>
                             <AiOutlineGithub />
                         </motion.a>
@@ -102,14 +104,25 @@ const Hero = () => {
              </motion.div>
          </motion.div>
 
-        <motion.img 
-            src={profilepic}
-            className='w-[350px] md:w-[500px] object-cover'
+        <motion.div
             initial={{opacity: 0, scale: 0.8}}
             whileInView={{opacity: 1, scale: 1}}
             viewport={{once: true}}
             transition={{duration: 1}}
-        />
+            whileHover={{
+                rotateY: 10,
+                rotateX: -10,
+                scale: 1.1,
+                transition: { duration: 0.3 }
+            }}
+            className="perspective-1000"
+        >
+            <img 
+                src={profilepic}
+                className='w-[350px] md:w-[500px] object-cover'
+                alt="Profile"
+            />
+        </motion.div>
       </div>
 
          <motion.div
@@ -117,15 +130,19 @@ const Hero = () => {
             whileInView={{opacity: 1}}
             viewport={{once: true}}
             transition={{duration: 1, delay: 2}}
-            className='flex flex-col md:flex-row items-center justify-center w-full py-12 md:py-24 px-4 md:px-0'
+            className='flex flex-col md:flex-row items-center justify-center w-full py-10 md:py-12 px-2 md:px-0'
          >
               <p className='text-gray-200 text-xl md:text-2xl mb-6 md:mb-0 md:mr-6'>My Tech Stack</p>   
-              <div className='flex flex-wrap justify-center gap-4 text-4xl md:text-5xl'>
+              <div className='flex flex-wrap justify-center gap-2 text-4xl md:text-5xl'>
                 <DiHtml5 className='text-orange-600'/>
                 <DiCss3 className='text-blue-600'/>
                 <DiJavascript1 className='text-yellow-500'/>
                 <DiReact className='text-blue-500'/>
                 <DiNodejsSmall className='text-green-500'/>
+                <DiMongodb className='text-green-500'/>
+                <DiMysql className='text-blue-500'/>
+                <FaDocker className='text-blue-500'/>
+                <DiFirebase className='text-yellow-500'/>
               </div>
          </motion.div>
          <div className='absolute inset-0 hidden md:block'>
