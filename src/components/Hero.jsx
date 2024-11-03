@@ -7,7 +7,7 @@ import ShinyEffect from './ShinyEffect';
 import {
     AiOutlineFacebook,
     AiOutlineGithub,
-    AiOutlineTikTok,
+    AiOutlineTikTok,  
 } from 'react-icons/ai';
 import {
     DiCss3,
@@ -43,7 +43,7 @@ const Hero = () => {
          >
             <TypeAnimation 
                 sequence={[
-                    'Full Stack Developer',
+                    'Full Stack Dev',
                     1000,
                     'Web Designer',
                     1000,
@@ -87,7 +87,7 @@ const Hero = () => {
                     >
                         Download CV
                     </motion.button>
-                    <div className='flex gap-6 flex-row text-4xl md:text-6xl text-purple-500 z-20'>
+                    <div className='flex gap-6 flex-row text-4xl md:text-6xl text-gray-200 z-20'>
                         <motion.a whileHover={{scale: 1.2}} href='https://github.com/tuananhkim555?tab=repositories'>
                             <AiOutlineGithub />
                         </motion.a>
@@ -99,7 +99,6 @@ const Hero = () => {
                         <motion.a whileHover={{scale: 1.2}} href='https://www.facebook.com/profile.php?id=100058628592945'>
                             <AiOutlineFacebook />
                         </motion.a>
-
                     </div>
              </motion.div>
          </motion.div>
