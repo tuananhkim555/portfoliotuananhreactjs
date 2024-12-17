@@ -1,22 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import project1 from "../assets/Duanphim.png";
+import project1 from "../assets/Jira.png";
 import project2 from "../assets/Shoptuananh.png";
-import project3 from "../assets/Imoublog.png";
+import project3 from "../assets/Duanphim.png";
 import project4 from "../assets/FigmaMovie.png";
 import project5 from "../assets/Samarblog.png";
 import project6 from "../assets/aiportfolio2.png";
-import { AiFillGithub, AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 import Reveal from "./Reveal";
 
 const projects = [
   {
     img: project1,
-    title: "Project #1",
-    description: "This is a UI project for a movie streaming website, built using React.js.",
+    title: "Project #3",
+    description: "Project Typescript - Jira Clone",
     links: {
-      site: "https://webxemphimtuananh.vercel.app",
-      github: "https://github.com/tuananhkim555/webxemphimtuananh",
+      site: "https://jiraclone-git-deploybug-tuananhkim555s-projects.vercel.app",
+      github: "https://github.com/tuananhkim555/jira_clone_du_an_cuoi_khoa_fe",
     },
   },
   {
@@ -29,12 +29,13 @@ const projects = [
     },
   },
   {
+   
     img: project3,
-    title: "Project #3",
-    description: "UI Imouz for frontend development using HTML, CSS, JS",
+    title: "Project #1",
+    description: "This is a UI project for a movie streaming website, built using React.js.",
     links: {
-      site: "https://tuananhkim555.github.io/Imouz/",
-      github: "https://github.com/tuananhkim555/Imouz",
+      site: "https://webxemphimtuananh.vercel.app",
+      github: "https://github.com/tuananhkim555/webxemphimtuananh",
     },
   },
   {
@@ -60,8 +61,8 @@ const projects = [
     title: "Project #6",
     description: "UI for frontend development using ReactJS.",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://github.com/tuananhkim555/aligo_media",
+      github: "https://github.com/tuananhkim555/aligo_media",
     },
   },
 ];
