@@ -108,12 +108,6 @@ const Hero = () => {
             whileInView={{opacity: 1, scale: 1}}
             viewport={{once: true}}
             transition={{duration: 1}}
-            whileHover={{
-                rotateY: 10,
-                rotateX: -10,
-                scale: 1.1,
-                transition: { duration: 0.3 }
-            }}
             className="perspective-1000"
         >
             <img 

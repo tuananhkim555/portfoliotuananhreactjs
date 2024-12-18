@@ -53,7 +53,7 @@ const Skills = () => {
        <div className='flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 max-w[1000px] mx-auto'>
             {skills.map((skill, index) => (
                 
-                <div key={index} className='border border-purple-900 py-6 rounded-lg bg-purple-900/20 shadow-lg w-full md:w-1/2'>
+                <div key={index} className='border border-purple-950/50 py-6 rounded-lg bg-purple-950/10 shadow-xl w-full md:w-1/2'>
                     <h3 className='text-xl font-bold mb-4 text-center'>{skill.category}</h3>
                     <div className='grid grid-cols-2 gap-4 px-4'>
                         {skill.technologies.map((tech, idx) => (
@@ -69,7 +69,7 @@ const Skills = () => {
             
             ))}
        </div>
-       
+
        </Reveal>
     </div>
   )
