@@ -29,7 +29,7 @@ const skills = [
         ],
     },
     {
-        category: 'Full Stack & Backend',
+        category: 'Backend',
         technologies: [
             {name: 'Node.js', icon: <DiNodejsSmall className='text-green-500'/>},
             {name: 'MongoDB', icon: <DiMongodb className='text-green-500'/>},
