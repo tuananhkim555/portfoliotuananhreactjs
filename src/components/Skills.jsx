@@ -13,7 +13,6 @@ import {
     DiDart
 } from 'react-icons/di'
 import Reveal from './Reveal'
-import { BackgroundGradient } from './ui/background-gradient'
 import { FaDocker, FaReact } from 'react-icons/fa'
 
 const skills = [
