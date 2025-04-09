@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import profilepic from '../assets/anhdaidien.png';
-import CVPortfolio from '../assets/CVPortfolio.pdf';
 import { TypeAnimation } from 'react-type-animation';
+import CVDinhTuanAnh from '../assets/CVDinhTuanAnh.pdf';
 import ShinyEffect from './ShinyEffect';
 import {
     AiOutlineFacebook,
@@ -18,6 +18,7 @@ import {
     DiMongodb,
     DiMysql,
     DiFirebase,
+    DiDart,
 } from 'react-icons/di';
 import { motion } from 'framer-motion';
 import { FaDocker} from 'react-icons/fa';
@@ -25,8 +26,8 @@ import { FaDocker} from 'react-icons/fa';
 const Hero = () => {
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = CVPortfolio;
-    link.download = 'CVPortfolio.pdf';
+    link.href = CVDinhTuanAnh;
+    link.download = 'CVDinhTuanAnh.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -43,9 +44,9 @@ const Hero = () => {
          >
             <TypeAnimation 
                 sequence={[
-                    'Developer FE & BE',
+                    'Software Engineer Fullstack',
                     1000,
-                    'Web Designer',
+                    'Web App Designer',
                     1000,
                     'App Mobile',
                     1000,
@@ -131,11 +132,11 @@ const Hero = () => {
                 <DiCss3 className='text-blue-600'/>
                 <DiJavascript1 className='text-yellow-500'/>
                 <DiReact className='text-blue-500'/>
+                <DiDart className='text-blue-500'/>
                 <DiNodejsSmall className='text-green-500'/>
                 <DiMongodb className='text-green-500'/>
                 <DiMysql className='text-blue-500'/>
                 <FaDocker className='text-blue-500'/>
-                <DiFirebase className='text-yellow-500'/>
               </div>
          </motion.div>
          <div className='absolute inset-0 hidden md:block'>
