@@ -17,7 +17,6 @@ import {
     DiNodejsSmall,
     DiMongodb,
     DiMysql,
-    DiFirebase,
     DiDart,
 } from 'react-icons/di';
 import { motion } from 'framer-motion';
