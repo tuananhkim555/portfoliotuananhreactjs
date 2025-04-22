@@ -10,6 +10,11 @@ const experiences = [
         period: "2022-2023",
         description: "Bang Onsen Spa Resort",
     },
+    {
+        company: "Second Company",
+        period: "2024-2025",
+        description: "IT inter CyberSoft Academy",
+    },
 ]
 
 const Experience = () => {
